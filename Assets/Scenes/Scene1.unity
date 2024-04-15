@@ -30386,7 +30386,12 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Thumb1_L'\n\tTransform 'Right ankle'\n\tTransform
+    'Spine'\n\tTransform 'Neck'\n\tTransform 'LittleFinger1_L'\n\tTransform 'MiddleFinger1_L'\n\tTransform
+    'IndexFinger3_R'\n\tTransform 'LittleFinger2_L'\n\tTransform 'Right leg'\n\tTransform
+    'Right elbow'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -52084,7 +52089,12 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Thumb1_L'\n\tTransform 'Right ankle'\n\tTransform
+    'Spine'\n\tTransform 'Neck'\n\tTransform 'LittleFinger1_L'\n\tTransform 'MiddleFinger1_L'\n\tTransform
+    'IndexFinger3_R'\n\tTransform 'LittleFinger2_L'\n\tTransform 'Right leg'\n\tTransform
+    'Right elbow'\n\tand more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -53837,7 +53847,7 @@ PrefabInstance:
     - target: {fileID: 1115502045676567951, guid: 279bfaf255fda0544aee6b326a799244,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417708617311084855, guid: 279bfaf255fda0544aee6b326a799244,
         type: 3}
