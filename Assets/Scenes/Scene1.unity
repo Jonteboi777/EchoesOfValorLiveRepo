@@ -33,8 +33,8 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
+  m_DefaultReflectionResolution: 512
+  m_ReflectionBounces: 2
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 847ce539a6db1e54d8688fbcd4a2aaa2,
+  m_LightingDataAsset: {fileID: 112000000, guid: 620e955e98a230140bc746a6d8981279,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 2294f2e40e7fe9945bc6c343e19d5b58,
     type: 2}
@@ -11009,7 +11009,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200011869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 783dcf5b4c2f6d74eb3383b1dd261b06, type: 3}
   m_Name: 
@@ -11017,6 +11017,7 @@ MonoBehaviour:
   playerObject: {fileID: 6530921623409838566, guid: 0ac3892a28772f346aef68c0388b30f9,
     type: 3}
   playerSpawnPoint: {fileID: 1127595308}
+  spawnTransformModification: {fileID: 1824134857}
   enviorment: {fileID: 578576633}
 --- !u!4 &200011871
 Transform:
@@ -18215,7 +18216,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: e0c4c7b201506f84f849352fa21f310c, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -30386,12 +30387,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Thumb1_L'\n\tTransform 'Right ankle'\n\tTransform
-    'Spine'\n\tTransform 'Neck'\n\tTransform 'LittleFinger1_L'\n\tTransform 'MiddleFinger1_L'\n\tTransform
-    'IndexFinger3_R'\n\tTransform 'LittleFinger2_L'\n\tTransform 'Right leg'\n\tTransform
-    'Right elbow'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -48010,6 +48006,74 @@ Transform:
   - {fileID: 276444265}
   m_Father: {fileID: 238823748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &856724541
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -635.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 61.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815909410761336216, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530921623409838566, guid: 0ac3892a28772f346aef68c0388b30f9,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerWolffe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ac3892a28772f346aef68c0388b30f9, type: 3}
 --- !u!1 &856751547
 GameObject:
   m_ObjectHideFlags: 0
@@ -49278,7 +49342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &882154937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52089,12 +52153,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Thumb1_L'\n\tTransform 'Right ankle'\n\tTransform
-    'Spine'\n\tTransform 'Neck'\n\tTransform 'LittleFinger1_L'\n\tTransform 'MiddleFinger1_L'\n\tTransform
-    'IndexFinger3_R'\n\tTransform 'LittleFinger2_L'\n\tTransform 'Right leg'\n\tTransform
-    'Right elbow'\n\tand more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -73006,6 +73065,71 @@ Transform:
   - {fileID: 650767351}
   m_Father: {fileID: 1040927059}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1315228987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315228989}
+  - component: {fileID: 1315228988}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &1315228988
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315228987}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 38, y: 10, z: 33.98}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &1315228989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315228987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -639.95, y: 61.750946, z: -7.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316691788
 GameObject:
   m_ObjectHideFlags: 0
@@ -85022,7 +85146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1539539980
 Animator:
   serializedVersion: 5
@@ -101178,6 +101302,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1824134856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824134857}
+  m_Layer: 0
+  m_Name: SpawnRotationEdit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1824134857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824134856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -635.89, y: 61.32, z: -19.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824727064
 GameObject:
   m_ObjectHideFlags: 0
@@ -129106,7 +129261,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 200011871}
   - {fileID: 308132535}
+  - {fileID: 856724541}
   - {fileID: 1127595309}
+  - {fileID: 1824134857}
   - {fileID: 330585546}
   - {fileID: 1838247393}
   - {fileID: 1150681703}
@@ -129139,3 +129296,4 @@ SceneRoots:
   - {fileID: 1185729526}
   - {fileID: 3804540429538635996}
   - {fileID: 433668891}
+  - {fileID: 1315228989}

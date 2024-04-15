@@ -1,0 +1,4 @@
+repository "Echoes of Valor - A Star Wars Story@JonteboiMakesGames@cloud"
+  path "/"
+    br "/main"
+    co "/main"

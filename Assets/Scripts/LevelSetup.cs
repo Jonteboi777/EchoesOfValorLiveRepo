@@ -6,6 +6,7 @@ public class LevelSetup : MonoBehaviour
 {
     public GameObject playerObject;
     public GameObject playerSpawnPoint;
+    public Transform spawnTransformModification;
 
     public GameObject enviorment;
 
@@ -32,5 +33,6 @@ public class LevelSetup : MonoBehaviour
     {
         yield return new WaitForSeconds(33);
         Instantiate(playerObject, playerSpawnPoint.transform.position, playerSpawnPoint.transform.rotation);
+        playerObject.transform.rotation = spawnTransformModification.transform.rotation;
     }
 }
