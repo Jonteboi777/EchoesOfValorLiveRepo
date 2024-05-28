@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject leftFirePoint;
     public GameObject rightFirePoint;
+    public AmmoManager leftGunAM;
+    public AmmoManager rightGunAM;
+    public float gunDamage = 25f;
+    public float gunRange = 100f;
+    public Camera playerCam;
+    public LayerMask playerDetector;
 
     [Header("Animators")]
     public Animator leftShoulderAnim;
@@ -81,18 +87,46 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            leftShoulderAnim.SetTrigger("Shoot");
-            leftGun.Play();
-            leftMuzzle.Play();
-            Instantiate(projectilePrefab, leftMuzzle.transform.position, leftFirePoint.transform.rotation);
+            if(leftGunAM.canShoot)
+            {
+                leftShoulderAnim.SetTrigger("Shoot");
+                leftGun.Play();
+                leftMuzzle.Play();
+                Instantiate(projectilePrefab, leftMuzzle.transform.position, leftFirePoint.transform.rotation);
+                leftGunAM.UseAmmo(10);
+                RaycastHit hit;
+                if(Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, gunRange, ~playerDetector))
+                {
+                    Debug.Log(hit.transform.name);
+                    EnemyNav enemyHealth = hit.transform.GetComponent<EnemyNav>();
+                    if(enemyHealth != null)
+                    {
+                        enemyHealth.UseHealth(25f);
+                    }
+                }
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            rightShoulderAnim.SetTrigger("Shoot");
-            rightGun.Play();
-            rightMuzzle.Play();
-            Instantiate(projectilePrefab, rightMuzzle.transform.position, rightFirePoint.transform.rotation);
+            if (rightGunAM.canShoot)
+            {
+                rightShoulderAnim.SetTrigger("Shoot");
+                rightGun.Play();
+                rightMuzzle.Play();
+                Instantiate(projectilePrefab, rightMuzzle.transform.position, rightFirePoint.transform.rotation);
+                rightGunAM.UseAmmo(10);
+                RaycastHit hit;
+                if (Physics.Raycast(playerCam.transform.position, playerCam.transform.forward, out hit, gunRange, ~playerDetector))
+                {
+                    Debug.Log(hit.transform.name);
+                    EnemyNav enemyHealth = hit.transform.GetComponent<EnemyNav>();
+                    if (enemyHealth != null)
+                    {
+                        enemyHealth.UseHealth(25f);
+                    }
+                }
+            }
         }
 
         if (Input.GetKey(KeyCode.W))
