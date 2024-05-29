@@ -8,8 +8,10 @@ public class HealthManager : MonoBehaviour
     public Image healthBar;
     public float healthAmount = 100f;
     public LevelSetup levelsetup;
+    public LevelSetupSecond levelSetupSecond;
     public AudioSource deathSound;
     bool playedDS = false;
+    public bool doWeNeedSecond;
 
     public void UseHealth(float lostHealth)
     {
@@ -19,7 +21,8 @@ public class HealthManager : MonoBehaviour
 
     private void Start()
     {
-        levelsetup = GameObject.Find("--LEVEL SETUP--").GetComponent<LevelSetup>();
+        
+       
         deathSound = GameObject.Find("MISSION FAILED _ AudioSource").GetComponent<AudioSource>();
     }
     private void Update()
@@ -31,7 +34,16 @@ public class HealthManager : MonoBehaviour
                 deathSound.Play();
                 playedDS = true;
             }
-            levelsetup.StartCoroutine(levelsetup.KillPlayer());
+            if (doWeNeedSecond)
+            {
+                levelSetupSecond = GameObject.Find("--LEVEL SETUP--").GetComponent<LevelSetupSecond>();
+                levelSetupSecond.StartCoroutine(levelSetupSecond.KillPlayer());
+            }
+            else
+            {
+                levelsetup = GameObject.Find("--LEVEL SETUP--").GetComponent<LevelSetup>();
+                levelsetup.StartCoroutine(levelsetup.KillPlayer());
+            }
         }
     }
 }

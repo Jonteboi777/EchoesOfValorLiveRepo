@@ -1076,7 +1076,6 @@ MonoBehaviour:
   detected: 0
   playerDead: 0
   Enemy: {fileID: 1327395032516932021}
-  healthManager: {fileID: 0}
   bullet: {fileID: 6206877170085830943, guid: 505d4347b8eca684e8c3d18b4ac43891, type: 3}
   muzzleFlash: {fileID: 1763734999034495290}
   ShootPoint: {fileID: 1682398331904797056}
@@ -1436,7 +1435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3459499605088176398}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.999829, y: -0.00000022015962, z: 0.00000010432477, w: 0.018494066}
+  m_LocalRotation: {x: 0.9998289, y: 0, z: 0, w: 0.018499402}
   m_LocalPosition: {x: -0.0009085225, y: 0.0012958967, z: 0.000013248827}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000014}
   m_ConstrainProportionsScale: 0
@@ -8439,7 +8438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7898933560966693509}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.999829, y: 0.0000002109992, z: 0.000000090632525, w: 0.018493269}
+  m_LocalRotation: {x: 0.9998289, y: 0, z: 0, w: 0.018499402}
   m_LocalPosition: {x: 0.0009085225, y: 0.0012958967, z: 0.000013248827}
   m_LocalScale: {x: 1, y: 1, z: 1.0000005}
   m_ConstrainProportionsScale: 0

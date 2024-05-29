@@ -66,9 +66,9 @@ public class LevelSetup : MonoBehaviour
     {
         deathReloadPanelAnimator.SetTrigger("Reload");
         yield return new WaitForSeconds(0.8f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
-//
+
     IEnumerator EnviormentSpawn()
     {
         yield return new WaitForSeconds(22.63f);

@@ -26,7 +26,7 @@ public class BlueBolt : MonoBehaviour
     }
     IEnumerator DestroyBullet()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 }
